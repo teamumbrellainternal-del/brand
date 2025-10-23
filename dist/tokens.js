@@ -1,0 +1,197 @@
+// Generated from design-tokens.json - DO NOT EDIT
+export const tokens = {
+  "name": "Umbrella Design System",
+  "version": "1.0.0",
+  "description": "Dark purple system with light mode default - operating system for live music",
+  "colors": {
+    "brand": {
+      "purple": {
+        "50": "#f5f3ff",
+        "100": "#ede9fe",
+        "200": "#ddd6fe",
+        "300": "#c9b8f5",
+        "400": "#b399ed",
+        "500": "#9370DB",
+        "600": "#7c5bc9",
+        "700": "#6847b7",
+        "800": "#5536a3",
+        "900": "#452988",
+        "royal": "#5B2C98",
+        "neon": "#7A3FFF",
+        "DEFAULT": "#9370DB"
+      }
+    },
+    "light": {
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#fafafa",
+        "tertiary": "#f5f5f5",
+        "hover": "#f0f0f0",
+        "active": "#e5e5e5"
+      },
+      "text": {
+        "primary": "#0a0a0a",
+        "secondary": "#525252",
+        "tertiary": "#737373",
+        "disabled": "#a3a3a3"
+      },
+      "border": {
+        "primary": "#e5e5e5",
+        "secondary": "#f0f0f0",
+        "hover": "#d4d4d4"
+      }
+    },
+    "dark": {
+      "background": {
+        "primary": "#121212",
+        "secondary": "#1E1E1E",
+        "tertiary": "#2A2A2A",
+        "hover": "#333333",
+        "active": "#3d3d3d"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "#d1d5db",
+        "tertiary": "#9ca3af",
+        "disabled": "#6b7280"
+      },
+      "border": {
+        "primary": "#2A2A2A",
+        "secondary": "#1E1E1E",
+        "hover": "#404040"
+      }
+    },
+    "semantic": {
+      "success": {
+        "light": "#d1fae5",
+        "DEFAULT": "#10b981",
+        "dark": "#059669",
+        "bg": "#ecfdf5"
+      },
+      "warning": {
+        "light": "#fef3c7",
+        "DEFAULT": "#f59e0b",
+        "dark": "#d97706",
+        "bg": "#fffbeb"
+      },
+      "error": {
+        "light": "#fee2e2",
+        "DEFAULT": "#ef4444",
+        "dark": "#dc2626",
+        "bg": "#fef2f2"
+      },
+      "info": {
+        "light": "#dbeafe",
+        "DEFAULT": "#3b82f6",
+        "dark": "#2563eb",
+        "bg": "#eff6ff"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": "'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+      "mono": "'Inter', ui-monospace, 'SF Mono', Monaco, 'Cascadia Code', monospace"
+    },
+    "fontSize": {
+      "12": "12px",
+      "13": "13px",
+      "14": "14px",
+      "16": "16px",
+      "18": "18px",
+      "20": "20px",
+      "24": "24px",
+      "32": "32px",
+      "40": "40px",
+      "48": "48px",
+      "56": "56px",
+      "72": "72px",
+      "88": "88px"
+    },
+    "lineHeight": {
+      "16": "16px",
+      "18": "18px",
+      "20": "20px",
+      "24": "24px",
+      "28": "28px",
+      "32": "32px",
+      "36": "36px",
+      "40": "40px",
+      "48": "48px",
+      "56": "56px",
+      "60": "60px",
+      "72": "72px",
+      "88": "88px"
+    },
+    "fontWeight": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "letterSpacing": {
+      "heading-xl": "-4.0px",
+      "heading-lg": "-2.0px",
+      "heading-md": "-1.0px",
+      "heading-sm": "-0.5px",
+      "none": "0"
+    }
+  },
+  "spacing": {
+    "0": "0",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem",
+    "32": "8rem"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "8px",
+    "xl": "12px",
+    "2xl": "16px",
+    "3xl": "24px",
+    "4xl": "32px",
+    "full": "9999px"
+  },
+  "boxShadow": {
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+    "purple": "0 0 20px rgba(91, 44, 152, 0.3)"
+  },
+  "transitionDuration": {
+    "fast": "150ms",
+    "base": "300ms",
+    "slow": "500ms",
+    "slower": "700ms"
+  },
+  "zIndex": {
+    "dropdown": 1000,
+    "sticky": 1100,
+    "fixed": 1200,
+    "modalBackdrop": 1300,
+    "modal": 1400,
+    "popover": 1500,
+    "tooltip": 1600
+  }
+};
+
+// Convenience exports
+export const colors = tokens.colors;
+export const typography = tokens.typography;
+export const spacing = tokens.spacing;
+export const borderRadius = tokens.borderRadius;
+export const boxShadow = tokens.boxShadow;
+export const transitionDuration = tokens.transitionDuration;
+export const zIndex = tokens.zIndex;
+
+export default tokens;

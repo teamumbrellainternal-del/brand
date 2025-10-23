@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "colors": {
+    "brand": {
+      "purple": {
+        "primary": "#9370DB",
+        "royal": "#5B2C98",
+        "neon": "#7A3FFF",
+        "light": "#b399ed",
+        "dark": "#6847b7"
+      }
+    },
+    "light": {
+      "background": {
+        "primary": "#ffffff",
+        "secondary": "#fafafa",
+        "tertiary": "#f5f5f5"
+      },
+      "text": {
+        "primary": "#0a0a0a",
+        "secondary": "#525252",
+        "tertiary": "#737373"
+      },
+      "border": {
+        "primary": "#e5e5e5",
+        "secondary": "#f0f0f0"
+      }
+    },
+    "dark": {
+      "background": {
+        "primary": "#121212",
+        "secondary": "#1E1E1E",
+        "tertiary": "#2A2A2A"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "#d1d5db",
+        "tertiary": "#9ca3af"
+      },
+      "border": {
+        "primary": "#2A2A2A",
+        "secondary": "#1E1E1E"
+      }
+    }
+  }
+}

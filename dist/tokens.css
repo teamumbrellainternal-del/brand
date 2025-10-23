@@ -1,0 +1,242 @@
+/**
+ * Umbrella Design System - CSS Custom Properties
+ * Generated from design-tokens.json
+ * HSL format for Tailwind opacity modifiers
+ * Light mode is default
+ */
+
+@layer base {
+  :root {
+    /* Brand - Umbrella Purple #9370DB (HSL for opacity) */
+    --primary: 260 60% 65%;
+    --primary-foreground: 0 0% 4%;
+
+    /* Backgrounds - Light Mode (Default) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+
+    /* Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+
+    /* Popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    /* Secondary */
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 4%;
+
+    /* Muted */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 32%;
+
+    /* Accent - Purple variant */
+    --accent: 259 70% 76%;
+    --accent-foreground: 0 0% 4%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 4%;
+
+    /* Borders */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 260 60% 65%;
+
+    /* Purple Palette (hex) */
+    --purple-50: #f5f3ff;
+    --purple-100: #ede9fe;
+    --purple-200: #ddd6fe;
+    --purple-300: #c9b8f5;
+    --purple-400: #b399ed;
+    --purple-500: #9370DB;
+    --purple-600: #7c5bc9;
+    --purple-700: #6847b7;
+    --purple-800: #5536a3;
+    --purple-900: #452988;
+    --purple-royal: #5B2C98;
+    --purple-neon: #7A3FFF;
+    --purple-DEFAULT: #9370DB;
+
+    /* Border Radius */
+    --radius: 8px;
+
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 258 100% 62%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 216 12% 84%;
+    --accent: 258 50% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 258 100% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* ============================================
+   UMBRELLA TYPOGRAPHY UTILITIES
+   Inter font with precise sizing
+   ============================================ */
+
+/* Headings */
+.text-heading-88 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 88px;
+  font-weight: 600;
+  line-height: 88px;
+  letter-spacing: -4.0px;
+}
+
+.text-heading-72 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: -3.6px;
+}
+
+.text-heading-56 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -2.8px;
+}
+
+.text-heading-48 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -2.0px;
+}
+
+.text-heading-40 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -1.6px;
+}
+
+.text-heading-32 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -1.0px;
+}
+
+.text-heading-24 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+
+.text-heading-20 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+}
+
+.text-heading-16 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+/* Copy (Body Text) */
+.text-copy-24 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.text-copy-20 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.text-copy-18 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.text-copy-16 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-copy-14 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.text-copy-13 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Buttons */
+.text-button-16 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.text-button-14 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.text-button-12 {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@umbrella/brand",
+  "version": "1.0.0",
+  "description": "Umbrella design system and brand assets - operating system for live music",
+  "main": "dist/tokens.js",
+  "files": [
+    "dist",
+    "tokens",
+    "docs",
+    "assets",
+    "fonts"
+  ],
+  "scripts": {
+    "build": "node scripts/download-fonts.js && node scripts/generate-all.js",
+    "postinstall": "npm run build"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "tailwind",
+    "umbrella",
+    "music",
+    "purple"
+  ],
+  "author": "Umbrella",
+  "license": "MIT"
+}
