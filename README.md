@@ -2,6 +2,24 @@
 
 Complete brand documentation and design system for Umbrella - the operating system for live music.
 
+[![GitHub Pages](https://img.shields.io/badge/demo-live-9370DB?style=for-the-badge&logo=github)](https://umbrella.github.io/brand)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/umbrella/brand/build.yml?branch=main&style=for-the-badge)](https://github.com/umbrella/brand/actions)
+
+## 🌐 Live Demo
+
+**Interactive Demo:** [https://umbrella.github.io/brand](https://umbrella.github.io/brand)
+
+See the complete brand system in action with:
+- All color palettes and purple variants
+- Typography scales with Inter font
+- Interactive components (buttons, cards, badges, inputs)
+- Code examples for CSS, Tailwind, and JavaScript
+- Light/dark theme toggle
+
+📖 **[View Demo Documentation →](docs/DEMO.md)**
+
+---
+
 ## 🎨 Brand Essence
 
 **Primary Color:** Purple #9370DB (Medium Purple)  
@@ -192,6 +210,10 @@ border: 1px solid #e5e5e5;
 
 ```
 umbrella-brand/
+├── .github/
+│   └── workflows/
+│       ├── build.yml               # Auto-build design system
+│       └── pages.yml               # Deploy to GitHub Pages
 ├── tokens/
 │   └── design-tokens.json          # Single source of truth
 ├── scripts/
@@ -204,11 +226,15 @@ umbrella-brand/
 │   ├── tailwind.preset.js          # Tailwind config
 │   └── tokens.js                   # JS module
 ├── assets/
-│   ├── logo/                       # Brand marks (TBD)
+│   ├── logos/                      # Brand marks & variations
+│   │   ├── umbrella-icon.svg       # Icon only (purple)
+│   │   ├── umbrella-logo-light.svg # Purple (for light bg)
+│   │   └── umbrella-logo-dark.svg  # White (for dark bg)
 │   └── colors/palette.json         # Color definitions
 ├── docs/
-│   └── brand-guide.md              # Complete guide
-├── index.html                      # Visual demo
+│   ├── brand-guide.md              # Complete brand guide
+│   └── DEMO.md                     # Demo documentation
+├── index.html                      # Interactive demo (live)
 └── package.json                    # Build scripts
 ```
 
@@ -251,7 +277,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      
+
       - name: Update submodule
         run: |
           git submodule update --remote brand
@@ -259,6 +285,67 @@ jobs:
           git commit -m "chore: update brand" || exit 0
           git push
 ```
+
+---
+
+## 🚀 GitHub Pages Deployment
+
+The brand kit includes automatic deployment to GitHub Pages for the interactive demo.
+
+### Initial Setup
+
+1. **Enable GitHub Pages:**
+   - Go to repository Settings → Pages
+   - Source: "GitHub Actions"
+   - Save changes
+
+2. **First Deployment:**
+   ```bash
+   git push origin main
+   ```
+
+3. **Access Demo:**
+   - Live URL: `https://[your-org].github.io/[repo-name]`
+   - Check deployment status in Actions tab
+
+### Automatic Deployments
+
+Every push to `main` branch triggers:
+1. **Build Workflow** - Regenerates design tokens (if changed)
+2. **Pages Workflow** - Deploys updated demo page
+
+**Deployment Time:** ~1-2 minutes
+
+### Manual Deployment
+
+Trigger manually from Actions tab:
+1. Go to Actions → "Deploy to GitHub Pages"
+2. Click "Run workflow" → "Run workflow"
+3. Wait for completion (~1 minute)
+
+### Custom Domain (Optional)
+
+To use a custom domain:
+1. Add CNAME file: `echo "brand.umbrella.com" > CNAME`
+2. Configure DNS: Add CNAME record pointing to `[org].github.io`
+3. Update Settings → Pages → Custom domain
+
+### Troubleshooting
+
+**Page not loading?**
+- Check Actions tab for deployment errors
+- Verify Pages is enabled in Settings
+- Ensure `index.html` is in repository root
+
+**404 errors?**
+- Wait 2-3 minutes after first deployment
+- Clear browser cache
+- Check repository visibility (public vs private)
+
+**Build failing?**
+- Check tokens/design-tokens.json syntax
+- Verify Node.js version (20+) in workflows
+- Review Actions logs for specific errors
 
 ---
 
@@ -383,9 +470,11 @@ Initial brand system with purple theme, light mode default, and complete design 
 ## 📞 Support
 
 For questions, updates, or contributions:
-- Review `docs/brand-guide.md` for comprehensive guidelines
-- Check `index.html` for visual examples
-- Reference `tokens/design-tokens.json` for exact values
+- **Live Demo:** [https://umbrella.github.io/brand](https://umbrella.github.io/brand)
+- **Demo Guide:** `docs/DEMO.md` - How to use the interactive demo
+- **Brand Guide:** `docs/brand-guide.md` - Comprehensive guidelines
+- **Design Tokens:** `tokens/design-tokens.json` - Exact values
+- **Visual Examples:** Open `index.html` locally
 
 ---
 
