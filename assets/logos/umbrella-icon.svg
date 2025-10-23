@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Umbrella Icon - Purple -->
+  <circle cx="32" cy="32" r="30" fill="#9370DB" opacity="0.1"/>
+  <path d="M32 12C18 12 12 20 12 28c0 2 1 4 3 4s3-2 3-4c0-4 2-8 6-8s6 4 6 8c0 2 1 4 2 4s2-2 2-4c0-4 2-8 6-8s6 4 6 8c0 2 1 4 3 4s3-2 3-4c0-8-6-16-20-16z" fill="#9370DB"/>
+  <rect x="30" y="28" width="4" height="24" rx="2" fill="#9370DB"/>
+  <path d="M34 48c0 2-2 4-4 4s-4-2-4-4h8z" fill="#9370DB"/>
+</svg>
