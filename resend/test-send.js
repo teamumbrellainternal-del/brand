@@ -45,8 +45,8 @@ async function sendTestEmail() {
   const testData = {
     firstName: 'Tom',
     email: 'tombionic@gmail.com',
-    appUrl: 'https://umbrella.app',
-    unsubscribeUrl: 'https://umbrella.app/unsubscribe?email=tombionic@gmail.com'
+    appUrl: 'https://umbrellalive.com',
+    unsubscribeUrl: 'https://umbrellalive.com/unsubscribe?email=tombionic@gmail.com'
   };
 
   // Replace all template variables with fallback support
@@ -90,7 +90,7 @@ async function sendTestEmail() {
       console.log('Next steps:');
       console.log('  1. Check your email inbox');
       console.log('  2. Verify purple branding looks correct');
-      console.log('  3. Test button click (should go to umbrella.app)');
+      console.log('  3. Test button click (should go to umbrellalive.com)');
       console.log('  4. Check mobile responsiveness\n');
     } else {
       console.error('❌ Failed to send email\n');
