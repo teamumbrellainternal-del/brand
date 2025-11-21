@@ -49,10 +49,11 @@ async function sendTestEmail() {
     unsubscribeUrl: 'https://umbrella.app/unsubscribe?email=tombionic@gmail.com'
   };
 
-  // Replace all template variables
+  // Replace all template variables with fallback support
   Object.keys(testData).forEach(key => {
     const regex = new RegExp(`{{${key}}}`, 'g');
-    html = html.replace(regex, testData[key]);
+    const value = testData[key] || (key === 'firstName' ? 'there' : '');
+    html = html.replace(regex, value);
   });
 
   console.log('✓ Template variables replaced\n');
@@ -72,7 +73,11 @@ async function sendTestEmail() {
         from: 'Umbrella <onboarding@resend.dev>',
         to: testData.email,
         subject: 'Welcome to Umbrella - You\'re In! 🎵',
-        html: html
+        html: html,
+        tags: [
+          { name: 'campaign', value: 'waitlist-welcome' },
+          { name: 'audience', value: 'beta-users' }
+        ]
       })
     });
 
