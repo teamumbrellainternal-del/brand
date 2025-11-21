@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Preview - Welcome to Umbrella</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .preview-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .preview-header {
+      background: #ffffff;
+      padding: 24px 32px;
+      border-bottom: 2px solid #9370DB;
+    }
+
+    .preview-header h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: #0a0a0a;
+      letter-spacing: -0.5px;
+    }
+
+    .preview-header p {
+      margin: 0;
+      font-size: 16px;
+      color: #737373;
+    }
+
+    .preview-controls {
+      padding: 20px 32px;
+      background: #fafafa;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .preview-controls label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0a0a0a;
+    }
+
+    .preview-controls button {
+      background: #ffffff;
+      border: 2px solid #9370DB;
+      color: #000000;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .preview-controls button:hover {
+      background: #f4f4f4;
+    }
+
+    .preview-controls button.active {
+      background: #9370DB;
+      color: white;
+    }
+
+    .iframe-container {
+      padding: 32px;
+      background: #f5f5f5;
+      min-height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    iframe {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    iframe.mobile {
+      width: 375px;
+      height: 800px;
+    }
+
+    iframe.desktop {
+      width: 100%;
+      max-width: 700px;
+      height: 1000px;
+    }
+
+    .preview-footer {
+      padding: 24px 32px;
+      background: #ffffff;
+      border-top: 1px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .preview-footer p {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      color: #525252;
+    }
+
+    .preview-footer code {
+      background: #f5f5f5;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #9370DB;
+      font-family: 'SF Mono', Monaco, monospace;
+    }
+
+    .checklist {
+      margin-top: 16px;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .checklist h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0a0a0a;
+      margin: 0 0 12px 0;
+    }
+
+    .checklist ul {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 14px;
+      color: #525252;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .preview-header {
+        padding: 20px;
+      }
+
+      .preview-controls {
+        padding: 16px 20px;
+      }
+
+      .iframe-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-container">
+    <!-- Header -->
+    <div class="preview-header">
+      <h1>📧 Email Preview</h1>
+      <p>Welcome to Umbrella - Waitlist Email</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="preview-controls">
+      <label>View:</label>
+      <button id="desktopBtn" class="active" onclick="switchView('desktop')">🖥 Desktop</button>
+      <button id="mobileBtn" onclick="switchView('mobile')">📱 Mobile</button>
+    </div>
+
+    <!-- Preview -->
+    <div class="iframe-container">
+      <iframe id="emailFrame" src="welcome-waitlist.html" class="desktop" title="Email Preview"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="preview-footer">
+      <p><strong>Next step:</strong> Send a test email</p>
+      <p>Run: <code>node test-send.js</code></p>
+
+      <div class="checklist">
+        <h3>✓ Testing Checklist:</h3>
+        <ul>
+          <li>Purple branding (#9370DB) is correct</li>
+          <li>Button style matches brand guide (white + purple outline)</li>
+          <li>Text is readable and properly aligned</li>
+          <li>Spacing looks good on both desktop and mobile</li>
+          <li>All links are working</li>
+          <li>Social icons in footer are visible</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchView(view) {
+      const iframe = document.getElementById('emailFrame');
+      const desktopBtn = document.getElementById('desktopBtn');
+      const mobileBtn = document.getElementById('mobileBtn');
+
+      if (view === 'mobile') {
+        iframe.className = 'mobile';
+        mobileBtn.classList.add('active');
+        desktopBtn.classList.remove('active');
+      } else {
+        iframe.className = 'desktop';
+        desktopBtn.classList.add('active');
+        mobileBtn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
