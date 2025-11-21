@@ -87,6 +87,49 @@ Check your inbox and verify:
 
 ---
 
+## 🚀 Sending to Full Waitlist
+
+### Prepare Waitlist CSV
+
+Ensure `/resend/waitlist.csv` has the correct format:
+```csv
+email,firstName
+person@example.com,John
+```
+
+### Send Options
+
+**Dry run (preview only):**
+```bash
+node resend/send-to-waitlist.js --dry-run
+```
+
+**Test with first 5 people:**
+```bash
+node resend/send-to-waitlist.js --limit=5
+```
+
+**Send to everyone:**
+```bash
+node resend/send-to-waitlist.js
+```
+
+The script will:
+- Remove duplicates automatically
+- Confirm before sending
+- Send with 2-second delay between emails (rate limiting)
+- Show progress for each email
+- Save detailed logs to `send-log.txt`
+- Save failed emails to `failed.txt` if any fail
+
+### Rate Limits
+
+- Resend free tier: 100 emails/day, 3,000/month
+- Script sends max 10/minute to be safe
+- Your waitlist: 45 people (well within limits)
+
+---
+
 ## 📧 Template Variables
 
 The email template uses these variables:
@@ -95,8 +138,8 @@ The email template uses these variables:
 |----------|-------------|---------|
 | `{{firstName}}` | Recipient's first name | "Tom" |
 | `{{email}}` | Recipient's email address | "tombionic@gmail.com" |
-| `{{appUrl}}` | Link to Umbrella app | "https://umbrella.app" |
-| `{{unsubscribeUrl}}` | Unsubscribe link | "https://umbrella.app/unsubscribe?email=..." |
+| `{{appUrl}}` | Link to Umbrella app | "https://umbrellalive.com" |
+| `{{unsubscribeUrl}}` | Unsubscribe link | "https://umbrellalive.com/unsubscribe?email=..." |
 
 **Usage in code:**
 
@@ -106,8 +149,8 @@ let html = fs.readFileSync('welcome-waitlist.html', 'utf8');
 
 html = html.replace(/{{firstName}}/g, 'Tom');
 html = html.replace(/{{email}}/g, 'tombionic@gmail.com');
-html = html.replace(/{{appUrl}}/g, 'https://umbrella.app');
-html = html.replace(/{{unsubscribeUrl}}/g, 'https://umbrella.app/unsubscribe?email=...');
+html = html.replace(/{{appUrl}}/g, 'https://umbrellalive.com');
+html = html.replace(/{{unsubscribeUrl}}/g, 'https://umbrellalive.com/unsubscribe?email=...');
 ```
 
 ---
